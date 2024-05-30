@@ -1,0 +1,19 @@
+### demo
+
+[描述]
+    *) demo是一个python项目打包的示例项目
+    *) 三种打包方式:
+       1. pex
+       2. zipapp
+       3. setuptools
+
+[使用]
+    *) pex打包后的目标文件运行: ./demo
+    *) zipapp打包后的目标文件运行: python demo.pyz
+    *) setuptools打包后端目标文件需要安装后运行:
+       1. 新建隔离环境:
+          python -m venv .venv
+       2. 在隔离环境中安装: 
+          .venv/bin/python -m pip install demo-0.0.1-py3-none-any.whl
+       3. 运行安装后的可执行文件:
+          .venv/bin/demo

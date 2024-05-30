@@ -1,0 +1,23 @@
+### build-py
+
+[描述]
+    *) Python项目的打包方式
+    *) pex: python -m pip install pex
+    *) zipapp: python标准库
+    *) setuptools: python -m pip install setuptools wheel
+
+[说明]
+    *) demo是一个示例项目
+    *) 打包可以在demo示例项目的根目录下运行:
+       1. make -f makefiles/pex.mk
+       2. make -f makefiles/zipapp.mk
+       3. make -f makefiles/setuptools.mk
+    *) 清理可以在demo示例项目的根目录下运行:
+       1. make clean -f makefiles/pex.mk
+       2. make clean -f makefiles/zipapp.mk
+       3. make clean -f makefiles/setuptools.mk
+
+[注意]
+    *) pex打包不需要目标机器有对应版本的python解释器
+    *) zipapp打包需要目标机器有对应版本的python解释器
+    *) setuptools打包需要目标机器有对应版本的python解释器
