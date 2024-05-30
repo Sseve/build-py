@@ -4,8 +4,14 @@
     *) demo是一个python项目打包的示例项目
     *) 三种打包方式:
        1. pex
+          打包: make -f makefiles/pex.mk
+          清理: make clean -f makefiles/pex.mk
        2. zipapp
+          打包: make -f makefiles/zipapp.mk
+          清理: make clean -f makefiles/aipapp.mk
        3. setuptools
+          打包: make -f makefiles/setuptools.mk
+          清理: make clean -f makefiles/setuptools.mk
 
 [使用]
     *) pex打包后的目标文件运行: ./demo
