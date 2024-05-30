@@ -4,10 +4,10 @@ from demo.config import settings
 
 
 def main():
-    print(settings.app_name)
     try:
         while True:
             time.sleep(2)
+            print(time.ctime(), ' ', settings.app_name)
     except KeyboardInterrupt:
         pass
 
