@@ -5,17 +5,17 @@ PYTHON := .venv/bin/python
 ENVPYTHON := "/usr/bin/env python"
 BUILD := build
 TARGET := demo.pyz
-SRC := src/*
+SRC := src/demo/*
 ENTRYPOINT := demo.main:main
 LIBS := .venv/lib/python3.10/site-packages/*
+
+.PHONY: all clean
 
 build:
 	[ ! -d $(BUILD) ] && mkdir $(BUILD)
 	cp -r $(SRC) $(BUILD)
 	cp -r $(LIBS) $(BUILD)
 	$(PYTHON) -m zipapp $(BUILD) -p $(ENVPYTHON) -c -m $(ENTRYPOINT) -o $(TARGET)
-
-.PHONY: all clean
 
 clean:
 	rm -fr $(BUILD) $(TARGET)
