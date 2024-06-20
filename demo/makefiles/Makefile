@@ -1,6 +1,6 @@
 # 标准库zipapp打包项目源代码.
 # 如果项目源码中的入口文件main.py命名是__main__.py,
-# 则这里zipapp不需要设置-m参数:
+# 则这里zipapp不需要设置-m参数(对比zipapp.mk文件):
 #    -m demo.__main__:main
 # 否则会报错!!!!!!!!
 
