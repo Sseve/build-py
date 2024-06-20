@@ -1,4 +1,10 @@
+import pathlib
+
 from setuptools import setup, find_packages
+
+
+path = pathlib.Path(__file__).parent.resolve()
+install_requires = (path / 'requirements.txt').read_text(encoding='utf-8').splitlines()
 
 
 setup(
@@ -12,5 +18,5 @@ setup(
     package_dir={"": "src"},
     entry_points={"console_scripts": ["demo = demo.main:main"]},
     package_data={"": [".env.demo"]},
-    install_requires=["python-dotenv==1.0.1"],
+    install_requires=install_requires,
 )
