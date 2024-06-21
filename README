@@ -18,6 +18,6 @@
        3. make clean -f makefiles/setuptools.mk
 
 [注意]
-    *) pex打包不需要目标机器有对应版本的Python解释器
+    *) pex打包需要目标机器有对应版本的Python解释器
     *) zipapp打包需要目标机器有对应版本的Python解释器
     *) setuptools打包需要目标机器有对应版本的Python解释器
