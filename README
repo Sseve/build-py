@@ -7,4 +7,4 @@
     4) zipapp
 
 [说明]
-    *) 推荐使用 setuptool 或者 pyproject.toml
+    *) 推荐使用 setuptool, pyproject.toml 或者 zipapp
