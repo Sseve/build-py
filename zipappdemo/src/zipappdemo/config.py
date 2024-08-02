@@ -13,3 +13,4 @@ class Setting:
     """.env配置"""
     HOST = os.getenv("HOST")
     PORT = os.getenv("PORT")
+    DEBUG = True if os.getenv("DEBUG") == "true" else False
