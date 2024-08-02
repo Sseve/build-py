@@ -10,9 +10,14 @@
 SCRIPT := setup.py
 PYTHON := /usr/bin/python
 TARGET := build dist src/setuptoolsdemo.egg-info
+PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
 
 build:
-	$(PYTHON) $(SCRIPT) bdist_wheel
+	# $(PYTHON) $(SCRIPT) bdist_wheel
+	PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple $(PYTHON) -m build -v
+
+install:
+	$(PYTHON) -m pip install . -t /opt/setuptoolsdemo/ -i $(PIP_INDEX_URL)
 
 .PHONY: all clean
 
