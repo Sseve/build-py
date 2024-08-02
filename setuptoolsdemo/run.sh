@@ -4,7 +4,7 @@
 ## 在实际部署时, 部署的路径中包如下文件:
 ##     1. .env
 ##     2. run.bash
-##     3. setupdemo-0.0.1-py3-none-any.whl
+##     3. setuptoolsdemo-0.0.1-py3-none-any.whl
 
 # 安装名字
 project_name=setuptoolsdemo
