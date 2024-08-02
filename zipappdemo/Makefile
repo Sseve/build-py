@@ -14,7 +14,8 @@ LIBS := .venv/lib/python3.10/site-packages/*
 build:
 	[ ! -d $(BUILD) ] && mkdir $(BUILD)
 	cp -r $(SRC) $(BUILD)
-	cp -r $(LIBS) $(BUILD)
+	#cp -r $(LIBS) $(BUILD)
+	rsync -a --exclude='__pycache__' --exclude='*.dist-info/' $(LIBS) $(BUILD)
 	$(PYTHON) -m zipapp $(BUILD) -p $(ENVPYTHON) -c -m $(ENTRYPOINT) -o $(TARGET)
 
 clean:
