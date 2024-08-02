@@ -10,6 +10,6 @@ else:
 
 
 class Setting:
-    """.env配置""" 
+    """.env配置"""
     HOST = os.getenv("HOST")
     PORT = os.getenv("PORT")

@@ -2,7 +2,6 @@
 # 安装依赖: .venv/bin/python -m pip install -r requirements.txt
 
 PYTHON := .venv/bin/python
-ENVPYTHON := "/usr/bin/env python"
 BUILD := build
 TARGET := zipappdemo.pyz
 SRC := src/zipappdemo
@@ -15,8 +14,9 @@ build:
 	[ ! -d $(BUILD) ] && mkdir $(BUILD)
 	cp -r $(SRC) $(BUILD)
 	#cp -r $(LIBS) $(BUILD)
-	rsync -a --exclude='__pycache__' --exclude='*.dist-info/' $(LIBS) $(BUILD)
-	$(PYTHON) -m zipapp $(BUILD) -p $(ENVPYTHON) -c -m $(ENTRYPOINT) -o $(TARGET)
+	# --exclude='*.dist-info/' 不能排除
+	rsync -a --exclude='__pycache__' $(LIBS) $(BUILD)
+	$(PYTHON) -m zipapp $(BUILD) -c -m $(ENTRYPOINT) --compress -o $(TARGET)
 
 clean:
 	rm -fr $(BUILD) $(TARGET)

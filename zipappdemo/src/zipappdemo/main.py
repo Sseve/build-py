@@ -7,7 +7,6 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object(Setting)
 
-
     @app.route("/", methods=("GET", "POST"))
     def test():
         return {"hello": "world"}
