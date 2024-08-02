@@ -1,0 +1,6 @@
+### py build
+
+[方式]
+    *) pex
+    *) pyproject.toml
+    *) setuptools

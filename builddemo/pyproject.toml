@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "builddemo"
+version = "0.0.1"
+description = "这是一个打包示例"
+authors = [
+    { name="Sseve", email="github@Sseve.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+
+# 依赖包
+dependencies = [
+    "blinker==1.8.2",
+    "click==8.1.7",
+    "Flask==3.0.3",
+    "itsdangerous==2.2.0",
+    "Jinja2==3.1.4",
+    "MarkupSafe==2.1.5",
+    "python-dotenv==1.0.1",
+    "Werkzeug==3.0.3",
+]
+
+[project.scripts]
+builddemo = "builddemo.main:main"
