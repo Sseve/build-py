@@ -1,11 +1,12 @@
 # zipapp构建demo项目
 # 安装依赖: .venv/bin/python -m pip install -r requirements.txt
 
+NAME := zipappdemo
 PYTHON := .venv/bin/python
 BUILD := build
-TARGET := zipappdemo.pyz
-SRC := src/zipappdemo
-ENTRYPOINT := zipappdemo.main:main
+TARGET := $(NAME).pyz
+SRC := src/$(NAME)
+ENTRYPOINT := $(NAME).main:main
 LIBS := .venv/lib/python3.10/site-packages/*
 
 .PHONY: all clean
