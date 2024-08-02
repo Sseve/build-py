@@ -1,6 +1,10 @@
 ### Python Packaging
 
 [方式]
-    *) pex
-    *) pyproject.toml
-    *) setuptools
+    1) pex
+    2) pyproject.toml
+    3) setuptools
+    4) zipapp
+
+[说明]
+    *) 推荐使用 setuptool 或者 pyproject.toml
