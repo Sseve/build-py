@@ -17,7 +17,7 @@ build:
 	#cp -r $(LIBS) $(BUILD)
 	# --exclude='*.dist-info/' 不能排除
 	rsync -a --exclude='__pycache__' $(LIBS) $(BUILD)
-	$(PYTHON) -m zipapp $(BUILD) -c -m $(ENTRYPOINT) --compress -o $(TARGET)
+	$(PYTHON) -m zipapp $(BUILD) -c -m $(ENTRYPOINT) -o $(TARGET)
 
 clean:
 	rm -fr $(BUILD) $(TARGET)
