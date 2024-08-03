@@ -1,17 +1,4 @@
-from flask import Flask
-from .config import Setting
-
-
-def create_app():
-
-    app = Flask(__name__)
-    app.config.from_object(Setting)
-
-    @app.route("/", methods=("GET", "POST"))
-    def test():
-        return {"hello": "world"}
-
-    return app
+from zipappdemo import create_app
 
 
 def main():
@@ -21,7 +8,3 @@ def main():
         host=app.config["HOST"],
         port=app.config["PORT"]
     )
-
-
-if __name__ == "__main__":
-    main()
