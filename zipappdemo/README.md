@@ -7,10 +7,11 @@ python 标准库 zipapp 进行打包
 
 部署: 将打包文件与静态资源文件一起部署到目标主机上
 ``` 
-    |-- .env
-    |-- static  
-    |   `-- css  
-    |       `-- index.css  
-    `-- zipappdemo.pyz  
+deploy/
+|-- .env
+|-- static
+|   `-- css
+|       `-- index.css
+`-- zipappdemo.pyz
 ```
 运行: python zipappdemo.pyz  
