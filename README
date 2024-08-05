@@ -7,4 +7,5 @@
     4) zipapp
 
 [说明]
-    *) 推荐使用 setuptool, pyproject.toml 或者 zipapp
+    *) 打包成独立程序, 推荐使用: zipapp
+    *) 打包成三方库, 推荐使用 setuptool, pyproject.toml
