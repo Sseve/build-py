@@ -1,0 +1,13 @@
+<html>
+<head>
+  {% block head %}
+  <title>taoist {% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" type="text/css">
+  {% endblock %}
+</head>
+<body>
+  {% block content %}
+  <p class="p-text"> this is a parent test</p>
+  {% endblock %}
+</body>
+</html>

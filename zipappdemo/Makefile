@@ -18,7 +18,7 @@ build:
 	#cp -r $(LIBS) $(BUILD)
 	# --exclude='*.dist-info/' 不能排除
 	rsync -a --exclude='__pycache__' $(LIBS) $(BUILD)
-	$(PYTHON) -m zipapp $(BUILD) -m $(ENTRYPOINT) -c -o $(TARGET)
+	$(PYTHON) -m zipapp $(BUILD) -m $(ENTRYPOINT) --compress -o $(TARGET)
 
 	[ ! -d $(DEPLOY) ] && mkdir $(DEPLOY)
 	cp .env $(TARGET) $(DEPLOY)
@@ -26,4 +26,4 @@ build:
 	tar -czf $(DEPLOY).tar.gz $(DEPLOY)
 
 clean:
-	rm -fr $(BUILD) $(TARGET) $(DEPLOY)
+	rm -fr $(BUILD) $(TARGET) $(DEPLOY) $(DEPLOY).tar.gz
