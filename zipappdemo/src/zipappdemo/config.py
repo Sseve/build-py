@@ -14,3 +14,6 @@ class Setting:
     HOST = os.getenv("HOST")
     PORT = os.getenv("PORT")
     DEBUG = True if os.getenv("DEBUG") == "true" else False
+    WORKERS = os.getenv("WORKERS")
+    TIMEOUT = os.getenv("TIMEOUT")
+    PIDFILE = os.getenv("PIDFILE")
