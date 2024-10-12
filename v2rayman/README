@@ -1,0 +1,6 @@
+### v2rayman
+
+1. 先激活虚拟环境
+   python -m venv .venv
+2. 在进行打包
+   make
