@@ -1,7 +1,7 @@
 # 直接用zip命令压缩文件打包
 # 保证项目的入库文件命名为: __main__.py
 
-.PYONY: build,clean
+.PHONY: build,clean
 
 build:
 	@mkdir build
