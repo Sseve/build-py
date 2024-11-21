@@ -11,7 +11,7 @@
 
 - 方式二:
 1. 编写setup.py脚本  
-2. 打包(一定要:src/example/__init__.py, 否则打包后找不到example包):  
+2. 打包(一定需要:src/example/__init__.py, 否则打包后找不到example包):  
    a. python setup.py sdist    (源码打包)  
       打包后的文件适用于开发者或者需要修改源码的人  
    b. python setup.py bdist_wheel    (二进制打包)  
