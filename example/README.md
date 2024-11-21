@@ -16,7 +16,7 @@
       打包后的文件适用于开发者或者需要修改源码的人  
    b. python setup.py bdist_wheel    (二进制打包)  
       打包后的文件适用于直接部署  
-3. 安装：
+3. 安装：  
    a. python -m pip install example-0.0.1.tar.gz -t TARGET_PATH  
       运行: export PYTHONPATH=$TARGET_PATH && python -m example  
    b. python -m pip install example-0.0.1-py3-none-any.whl -t TARGET_PATH  
