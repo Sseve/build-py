@@ -21,4 +21,4 @@
       运行: export PYTHONPATH=$TARGET_PATH && python -m example  
    b. python -m pip install example-0.0.1-py3-none-any.whl -t TARGET_PATH  
       运行: export PYTHONPATH=$TARGET_PATH && python -m example  
-            或者 export PATH=$PATH:$TARGET_PATH/bin && example  
+            或者 export PATH=$PATH:$TARGET_PATH/bin && export PYTHONPATH=$TARGET_PATH && example  
